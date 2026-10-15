@@ -1,5 +1,13 @@
-venv/
-__pycache__/
-*.pyc
-*.db
-*.log
+# Terraform binary (too big for GitHub - the workflow installs its own)
+terraform.exe
+
+# Local provider downloads
+.terraform/
+
+# State files contain resource details and must not be committed
+*.tfstate
+*.tfstate.*
+
+# Variable files that may hold secrets
+*.tfvars
+crash.log
